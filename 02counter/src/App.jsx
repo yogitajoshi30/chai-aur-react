@@ -1,16 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   let [count, setCount] = useState(1);
   //let counter = 1;
   const addValue = () => {
-    setCount(count + 1);
+    if (count < 20) setCount(count + 1);
+    else setCount(count);
   }
   const removeValue = () => {
-    setCount(count - 1);
+    if (count > 0) setCount(count - 1);
+    else setCount(count);
   }
 
   return (

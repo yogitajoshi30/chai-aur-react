@@ -13,15 +13,15 @@ function App() {
     () => {
       let pass = "";
       let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-      if (numberAllowed) str += "0123456789"
-      if (charAllowed) str += "~`!@#$%^&*{}[]-+=_"
+      if (numberAllowed) str += "0123456789"//if number allowed to ye poori string str mein append kra denge.
+      if (charAllowed) str += "~`!@#$%^&*{}[]-+=_"//if char allowed to ye poori string str mein append kra denge.
 
       for (let i = 1; i <= length; i++) {
-        let char = Math.floor(Math.random() * str.length + 1)
-        pass += str.charAt(char);
+        let char = Math.floor(Math.random() * str.length)//ab Math.random ki multiplication string ki current length se kra di(if no number and char allowed, length=52; if number allowed, length=62; if char allowed length= 70; if number and char both allowed, length=80), then jo bhi value aayegi use Math.floor kr diya.
+        pass += str.charAt(char);//ab pass mein vo value append krate jayenge jo str mein char pe aari hogi.
 
       }
-      setPassword(pass);
+      setPassword(pass);//then pass set with the setPassword function.
     },
     [length, numberAllowed, charAllowed, setPassword],
   )
@@ -52,7 +52,7 @@ function App() {
           />
           <button
             onClick={copyPasswordToClipboard}
-            className='outline-none bg-gray-800 text-pink-500 px-3 py-0.5 shrink-0'
+            className='outline-none bg-gray-800 text-pink-500 px-3 py-0.5 shrink-0 hover:bg-slate-700'
           >copy</button>
 
         </div>

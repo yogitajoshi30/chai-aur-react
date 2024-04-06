@@ -1,10 +1,12 @@
 import React from 'react'
 
-function Card({userName, text, btnText="Visit Me"}) {
+function Card({ userName, text, btnText = "Visit Me" }) {
     /*function Card(props) {
     console.log(props.userName);//App mein Card mein hmne username pass kra tha use yha aise access krte hai
-    //console.log(userName);//=> Card k props ko aise bhi access kr skte hai, baar baar props na likhna pde, iske liye hm upar jo function bnate hai, jse yha pe Card bnaya hai, usmein directly prop ka naam pass kr dete hai.
-    console.log(props.text)*/
+    console.log(props.text);
+    */
+    console.log(userName);//=> Card k props ko aise bhi access kr skte hai, baar baar props na likhna pde, iske liye hm upar jo function bnate hai, jse yha pe Card bnaya hai, usmein directly prop ka naam pass kr dete hai.
+
     return (
         <div className="relative h-[400px] w-[300px] rounded-md">
             <img

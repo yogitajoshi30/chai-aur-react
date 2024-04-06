@@ -11,7 +11,6 @@ function InputBox({
   currencyDisable = false,
   className = "",
 }) {
-
   const amountInputId = useId();
 
   return (
@@ -27,7 +26,7 @@ function InputBox({
           placeholder="Amount"
           disabled={amountDisable}
           value={amount}
-          onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+          onChange={(e) => onAmountChange && onAmountChange(e.target.value)}//onAmountChange(Number(e.target.value))}=> ye aise tha but website pe jitni bhi baar m amount change krri thi vo 0 pe reset ho ja rha tha, isliye mne use Number mein convert ni kra.
         />
       </div>
       <div className="w-1/2 flex flex-wrap justify-end text-right">

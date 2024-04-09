@@ -1,10 +1,12 @@
 import React from 'react'
 
 function Card({ userName, text, btnText = "Visit Me" }) {
-    /*function Card(props) {
+    /*Step 2- Accessing Props: Inside the component, we can access props through the props object. Here, `props.userName` and `props.text` represent the values passed to the component.
+    function Card(props) {
     console.log(props.userName);//App mein Card mein hmne username pass kra tha use yha aise access krte hai
     console.log(props.text);
     */
+
     console.log(userName);//=> Card k props ko aise bhi access kr skte hai, baar baar props na likhna pde, iske liye hm upar jo function bnate hai, jse yha pe Card bnaya hai, usmein directly prop ka naam pass kr dete hai.
 
     return (
